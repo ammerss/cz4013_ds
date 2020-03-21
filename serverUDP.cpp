@@ -8,7 +8,7 @@
 
 #include "serverUDP.hpp"
 
-server_UDP::server_UDP(int port){
+serverUDP::server_UDP(int port){
     portNo = port;
     sock = socket(AF_INET, SOCK_DGRAM, 0);
     if(sock < 0){
