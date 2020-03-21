@@ -18,7 +18,7 @@
 #include <cstdio>
 
 
-class server_UDP{
+class serverUDP{
 private:
     int sock; // socket
     int portNo; // port number to use
@@ -26,7 +26,7 @@ private:
     struct sockaddr_in yourSocketAddress; // client's add
 
 public:
-    server_UDP (int port);
+    serverUDP (int port);
    
 };
 
