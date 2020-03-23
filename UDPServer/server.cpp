@@ -1,13 +1,4 @@
-#include <stdio.h>
-
-#include <windows.h>
-
-#define BUFFER_SIZE 1024
-
-//################################################################################
-
-#pragma comment (lib,"ws2_32.lib")
-
+#include "server.h"
 
 
 void main(void)
@@ -33,16 +24,15 @@ void main(void)
 
 	short   ServerPort = 9991;
 
-
+	
 
 	if (WSAStartup(0x202, &wsaData) == SOCKET_ERROR)
 
 	{
 
 		printf("WinSock 초기화부분에서 문제 발생.n");
-
 		WSACleanup();
-
+		
 	}
 
 
@@ -157,6 +147,6 @@ void main(void)
 
 	closesocket(ServerSocket); // 소켓을 닫습니다.
 
-	WSACleanup();
 
+	WSACleanup();
 }
